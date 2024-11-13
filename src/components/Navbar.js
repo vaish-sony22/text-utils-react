@@ -21,6 +21,33 @@ export default function Navbar(props) {
                         <li className="nav-item">
                             <Link className="nav-link" to="/contact-us">Contact Us</Link>
                         </li>
+                                    <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Fruits
+              </button>
+              <ul className="dropdown-menu">
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Apple
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Banana
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/">
+                    Orange
+                  </a>
+                </li>
+              </ul>
+            </div>
 
                     </ul>
                     <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
