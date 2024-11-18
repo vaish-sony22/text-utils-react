@@ -39,6 +39,11 @@ export default function Navbar(props) {
                 Contact Us
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/table">
+                Data table
+              </Link>
+            </li>
             <div className="dropdown">
               <button
                 className="btn btn-secondary dropdown-toggle"
