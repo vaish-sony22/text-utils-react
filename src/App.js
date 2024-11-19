@@ -22,6 +22,47 @@ function App() {
     }, 1500);
   };
 
+  const tableStyle = {
+    border: "1px solid black",
+    borderCollapse: "collapse",
+    width: "100%",
+    marginTop: "20px",
+    backgroundColor: "#f9f9f9",
+  };
+
+  const thStyle = {
+    backgroundColor: "rgb(0 156 255)",
+    color: "white",
+    padding: "8px",
+    textAlign: "center",
+  };
+
+  const tdStyle = {
+    padding: "8px",
+    textAlign: "center",
+  };
+
+  const tdStyleBlue = {
+    backgroundColor: "rgb(0 156 255)",
+    color: "white",
+    padding: "8px",
+    textAlign: "center",
+  };
+
+  const tdStyleRed = {
+    backgroundColor: "red",
+    color: "white",
+    padding: "8px",
+    textAlign: "center",
+  };
+
+  const tdStyleGreen = {
+    backgroundColor: "green",
+    color: "white",
+    padding: "8px",
+    textAlign: "center",
+  };
+
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
@@ -54,7 +95,14 @@ function App() {
               <ContactUs mode={mode} />
             </Route>
             <Route exact path="/table">
-              <Table />
+              <Table
+                tableStyle={tableStyle}
+                tdStyle={tdStyle}
+                thStyle={thStyle}
+                tdStyleBlue={tdStyleBlue}
+                tdStyleRed={tdStyleRed}
+                tdStyleGreen={tdStyleGreen}
+              />
             </Route>
             <Route exact path="/">
               <TextForm
